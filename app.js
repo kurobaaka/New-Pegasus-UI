@@ -115,8 +115,8 @@ let friends = new Array();
 let favourites = new Array();
 let settingsData = new Settings();
 
-let versionPlugin = "1.2.0";
-let linkToAuthor = "https://stepan323446.github.io/Pony-UI-Plugin-Update/";
+let versionPlugin = "1.0.0";
+let linkToAuthor = "https://github.com/tpkdupxktd";
 
 let needToUpdate = false;
 let dataUpdate;
