@@ -664,23 +664,3 @@ $(document).ready(function () {
             });
         }
     });
-
-    $.ajax({
-        url: 'https://stepan323446.github.io/Pony-UI-Plugin-Update/update.json',
-        type: "GET",
-        async: true,
-        cache: false,
-        success: function(data)
-        {
-            dataUpdate = data;
-
-            if(versionPlugin != dataUpdate["UpdatedVersion"])
-            {
-                needToUpdate = true;
-                CreateUpdateWindow();
-                UpdateAppend($(".MPPL-footer-text"));
-            }
-        }
-   });
-    
-});
