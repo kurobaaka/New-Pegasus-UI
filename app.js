@@ -665,24 +665,6 @@ $(document).ready(function () {
         }
     });
 
-    
-    function CreateUpdateWindow()
-    {
-        console.log(dataUpdate);
-        $("body").prepend('<div class="MPPL-container MPPL-Update-Container"><div class="MPPL-Window"><div class="MPPL-modal-header">New Update '+ dataUpdate["UpdatedVersion"] +' for plugin</div><div class="MPPL-modal-content"><div class="MPPL-Update-Img"><img src="' + dataUpdate["UpdatedImage"] +'" alt=""></div><div class="MPPL-title-update">'+ dataUpdate["UpdatedHead"] +'</div><div class="MPPL-list-of-updates"><ul></ul></div></div><div class="MPPL-modal-footer"><div class="MPPL-left"><button class="btn" id="MPPL-close-update">Close</button></div><div class="MPPL-right"><a href="https://stepan323446.github.io/Pony-UI-Plugin-Update/" target="_blank" class="btn">How to update plugin</a><a href="'+ dataUpdate["UpdatedLink"] +'" download" class="btn MPPL-btn-update">Update!</a></div></div></div></div>');
-
-        $("#MPPL-close-update").click(function()
-        {
-            $(".MPPL-Update-Container").remove();
-        });
-
-
-        for(let i = 0; i < dataUpdate["UpdatedItems"].length; i++)
-        {
-            $(".MPPL-list-of-updates ul").append('<li>' + dataUpdate["UpdatedItems"][i]["text_content"] +'</li>');
-        }
-    }
-
     $.ajax({
         url: 'https://stepan323446.github.io/Pony-UI-Plugin-Update/update.json',
         type: "GET",
