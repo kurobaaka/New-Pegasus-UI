@@ -35,11 +35,12 @@
 
 .friends-dropdown-menu
 {
-    width: 30% !important;
+    position: relative; 
+    width: 15% !important;
     position: fixed !important;
     right: 0 !important;
     padding: 5px !important;
-    height: 80% !important;
+    height: 35% !important;
     top: 50px !important;
     margin: 0 !important;
     z-index: 1 !important;
@@ -52,8 +53,9 @@
 }
 #MPPL-searchFriend
 {
+    position: relative; 
     margin: 10px 0;
-    order: 2;
+    order: 1;
     background-color: #fff !important;
     border-color: #c2c2c2 !important;
 }
@@ -79,10 +81,11 @@
 }
 .friends-dropdown-menu .friends-list-header
 {
-    order: 1;
+    position: relative; 
 }
 .MPPL-S-DarkTheme .friends-item-account
 {
+    position: relative; 
     color: #fff !important;
 }
 .MPPL-S-square-portrait .portrait-box.small
@@ -94,6 +97,8 @@
 .friends-item,
 .MPPL-S-DarkTheme .dropdown-menu-right .character-select-list li a
 {
+    position: relative; 
+    order:3 ;
     outline: none !important;
     transition: 0.3s ease;
     position: relative;
@@ -130,7 +135,8 @@
 }
 virtual-list.friends-list
 {
-    width: 100% !important;
+    position: relative; 
+    width: 50% !important;
     max-height: 94% !important;
 
     order: 4;
@@ -147,6 +153,8 @@ settings-box
 .friends-dropdown-menu .form-control
 .character-select-search .form-control
 {
+    order:2 ;
+    position: relative; 
     background-color: #e6e6e6 !important;
     border: 1px solid #c5c5c5 !important;
     border-radius: 0.25rem !important;
@@ -155,6 +163,8 @@ settings-box
 .friends-dropdown-menu .form-control:focus,
 .character-select-search .form-control:focus
 {
+    order:2 ;
+    position: relative; 
     background-color: #e6e6e6 !important;
     border: 1px solid #c5c5c5 !important;
     color: rgb(34, 34, 34) !important;
@@ -187,13 +197,16 @@ settings-box
     color: #ddd !important;
 }
 #MPPL-favouriteFriends
-{
+{ 
+    bottom: 1;
     order: 3;
-    display: flex;
 }
 .MPPL-friends
 {
-    width: 50%;
+    position: relative; 
+    bottom: 0;
+    order:3 ;
+    width: 45%;
     text-align: center;
     padding: 10px;
     color: #94989c !important;
@@ -203,6 +216,7 @@ settings-box
 }
 .MPPL-S-DarkTheme .MPPL-friends
 {
+    position: relative; 
     color: rgb(154 154 154) !important;
 }
 .MPPL-friends:hover
@@ -212,17 +226,21 @@ settings-box
 }
 .MPPL-friends.active
 {
+    position: relative; 
+    order: 1;
     border-bottom: 1px solid rgb(34, 34, 34);
     color: rgb(34, 34, 34) !important;
 }
 .MPPL-S-DarkTheme .MPPL-friends.active
 {
+    order: 1;
     border-bottom: 1px solid #Fff;
     color: #fff !important;
 }
 
 .MPPL-addFav
 {
+    order:1 ;
     position: absolute;
     right: 0;
     top: 50%;
@@ -268,7 +286,7 @@ settings-box
 }
 .MPPL-S-DarkTheme .MPPL-addFav.active svg
 {
-    fill: rgb(240, 255, 34);
+    fill: rgb(255, 202, 28);
 }
 .MPPL-favouriteStar
 {
@@ -291,20 +309,23 @@ settings-box
 .MPPL-S-DarkTheme .MPPL-favouriteStar,
 .MPPL-S-DarkTheme .MPPL-favouriteStar svg
 {
-    fill: rgb(240, 255, 34);
+    fill: rgb(255, 202, 28);
 }
 
 .friends-item:not(.editing-note):hover .MPPL-addFav
 {
+    order:3 ;
     width: auto;
     padding: 9px;
 }
 .friends-item:not(.editing-note):hover .MPPL-addFav svg
 {
+    order:3 ;
     width: 100%;
 }
 .MPPL-S-DarkTheme .friends-item button:hover
 {
+    order:3 ;
     background: #7a7a7a !important;
 }
 
