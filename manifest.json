@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Pony Town UI",
-    "version": "1.2.0",
+    "name": "New Pegasus Best UI",
+    "version": "1.0.0",
     "description": "Change UI Interface for game Pony Town by Waidelos",
     "icons": {
         "128": "images/128.png"
@@ -9,22 +9,22 @@
     "content_scripts": [
         
         {
-            "matches": [ "https://newpegasus.online/*" ],
+            "matches": [ "https://newpegasus.online/*", "https://pixel.horse/*" ],
             "css" : ["style-theme.css"],
             "run_at":"document_start"
         },
         {
-            "matches": [ "https://newpegasus.online/*" ],
+            "matches": [ "https://newpegasus.online/*", "https://pixel.horse/*" ],
             "js" : ["js/jquery-3.5.1.min.js"],
             "run_at":"document_start"
         },
         {
-            "matches": [ "https://newpegasus.online/*" ],
+            "matches": [ "https://newpegasus.online/*", "https://pixel.horse/*" ],
             "js": [ "fontawesome.js" ],
             "run_at":"document_end"
         },
         {
-            "matches": [ "https://newpegasus.online/*" ],
+            "matches": [ "https://newpegasus.online/*", "https://pixel.horse/*" ],
             "js": [ "app.js" ],
             "run_at":"document_end"
         }
