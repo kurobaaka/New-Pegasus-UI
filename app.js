@@ -37,20 +37,6 @@ function ReturnBorderRound(Enum)
             return "";
     }
 }
-function ReturnBackgroundBlur(Enum)
-{
-    switch(Enum)
-    {
-        case noneEnum:
-            return "MPPL-M-S-BackgroundBlur-none";
-        case lowEnum:
-            return "MPPL-M-S-BackgroundBlur-low";
-        case middleEnum:
-            return "MPPL-M-S-BackgroundBlur-medium";
-        case highEnum:
-            return "MPPL-M-S-BackgroundBlur-high";
-    }
-}
 
 function ReturnOpacityWindow(Enum)
 {
@@ -218,10 +204,7 @@ function Settings()
     }
     this.setBlurBackground = function(enumValue, start = false)
     {
-        if(start)
-            this.setSpecialSetting(enumValue, this.blurBackground, ReturnBackgroundBlur, start);
-        else
-            settingsData.blurBackground = settingsData.setSpecialSetting(enumValue, settingsData.blurBackground, ReturnBackgroundBlur, start);
+
     }
     this.setOpacityWindow = function(enumValue, start = false)
     {
@@ -297,8 +280,6 @@ try {
         settingsData.darkTheme = checkSetting(items["MPPL-settings-data"].darkTheme, new Settings().darkTheme);
         settingsData.squareImage = checkSetting(items["MPPL-settings-data"].squareImage, new Settings().squareImage);
         settingsData.roundnessWindow = checkSetting(items["MPPL-settings-data"].roundnessWindow, new Settings().roundnessWindow);
-        settingsData.blurBackground = checkSetting(items["MPPL-settings-data"].blurBackground, new Settings().blurBackground);
-        settingsData.blurForDropdown = checkSetting(items["MPPL-settings-data"].blurForDropdown, new Settings().blurForDropdown);
         settingsData.opacityWindow = checkSetting(items["MPPL-settings-data"].opacityWindow, new Settings().opacityWindow);
         settingsData.opacityInputs = checkSetting(items["MPPL-settings-data"].opacityInputs, new Settings().opacityInputs);
 
@@ -327,7 +308,7 @@ $(document).ready(function () {
 
     function FooterAppend(footer)
     {
-        $(footer).append('<div class="app-version"><div class="MPPL-footer-text">Plugin Pony Town UI: <b>' + versionPlugin +'</b></div><div class="text-nowrap d-inline d-sm-block">by <a target="_blank" href="'+ linkToAuthor +'">Mariana Ponyriama</a></div></div>');
+        $(footer).append('<div class="app-version"><div class="MPPL-footer-text">Plugin Pony Town UI: <b>' + versionPlugin +'</b></div><div class="text-nowrap d-inline d-sm-block">by <a target="_blank" href="'+ linkToAuthor +'">Waidelos</a></div></div>');
     }
     function UpdateAppend(target)
     {
@@ -356,7 +337,7 @@ $(document).ready(function () {
 
             $("#MPPL-setting-plugin").click(function()
             {
-                $("body").append('<div class="MPPL-container"><div class="MPPL-Window MPPL-settings"><div class="MPPL-modal-header">Settings for Plugin</div><div class="MPPL-modal-content"></div><div class="MPPL-modal-footer"><div class="MPPL-left"><div class="MPPL-version-setting">Version '+ versionPlugin +' by <a href="'+ linkToAuthor +'" target="_blank">Mariana Ponyriama</a></div></div><div class="MPPL-right"><button type="button" class="btn" id="MPPL-reset-plugin">Reset</button><button type="button" class="btn" id="MPPL-close-plugin">Close</button></div></div></div></div>');
+                $("body").append('<div class="MPPL-container"><div class="MPPL-Window MPPL-settings"><div class="MPPL-modal-header">Settings for Plugin</div><div class="MPPL-modal-content"></div><div class="MPPL-modal-footer"><div class="MPPL-left"><div class="MPPL-version-setting">Version '+ versionPlugin +' by <a href="'+ linkToAuthor +'" target="_blank">Waidelos</a></div></div><div class="MPPL-right"><button type="button" class="btn" id="MPPL-reset-plugin">Reset</button><button type="button" class="btn" id="MPPL-close-plugin">Close</button></div></div></div></div>');
 
                 $("#MPPL-close-plugin").click(function()
                 {
@@ -414,23 +395,6 @@ $(document).ready(function () {
                     settingsData.setData();
                     settingsData.applySettings();
                 }, blurCheckbox, "Blur effect on the background of windows");
-
-
-                // ПОЗДНЕЕ ПОСЛЕ OPACITY DROPDOWN
-                /* itemSettingsCheckbox("blurForDropdown", "Dropdown menu options", function()
-                {
-                    settingsData.blurForDropdown = true;
-                    settingsData.setData();
-                    settingsData.applySettings();
-                }, function(){
-                    settingsData.blurForDropdown = false;
-                    settingsData.setData();
-                    settingsData.applySettings();
-                }, settingsData.blurForDropdown, "Blur effect on the background of options menu"); */
-                itemSettingsSelect("customBackgroundBlur", "Custom Blur", settingsData.blurBackground, settingsData.setBlurBackground, "Degree of blur effect", new SelectedElement("Low", lowEnum), new SelectedElement("Medium", middleEnum), new SelectedElement("High", highEnum));
-
-                /* linkToOtherItem("blurForDropdown", "blurbackgroundCheckpoint", true); */
-                linkToOtherItem("customBackgroundBlur", "blurbackgroundCheckpoint", true);
 
                 let opacityCheckbox;
                 if(settingsData.opacityWindow == PonyTownEnum)
@@ -634,3 +598,34 @@ $(document).ready(function () {
             });
 
         }
+
+        if ($(e.target).hasClass("friends-item")) {
+            $(e.target).on("click", function () {
+                friends[0].nicknamePony();
+            });
+            $(e.target).append("<div class='MPPL-addFav'><svg version='1.1' id='Слой_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'viewBox='0 0 24 24' style='enable-background:new 0 0 24 24;' xml:space='preserve' fill='#323230'><path class='st0' d='M12.5,1.6l3,6.3c0.1,0.2,0.2,0.3,0.4,0.3l6.9,1c0.5,0.1,0.6,0.6,0.3,1l-5,4.8C18,15.1,18,15.2,18,15.4l1.2,6.8c0.1,0.5-0.4,0.8-0.8,0.6l-6.1-3.3c-0.2-0.1-0.4-0.1-0.5,0l-6.1,3.3c-0.4,0.2-0.9-0.1-0.8-0.6L6,15.4c0-0.2,0-0.4-0.2-0.5l-5-4.8c-0.3-0.3-0.2-0.9,0.3-1l6.9-1c0.2,0,0.3-0.1,0.4-0.3l3-6.3C11.7,1.2,12.3,1.2,12.5,1.6z'/></svg></div>");
+            $(e.target).append("<div class='MPPL-favouriteStar'><svg version='1.1' id='Слой_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'viewBox='0 0 24 24' style='enable-background:new 0 0 24 24;' xml:space='preserve' fill='#323230'><path class='st0' d='M12.5,1.6l3,6.3c0.1,0.2,0.2,0.3,0.4,0.3l6.9,1c0.5,0.1,0.6,0.6,0.3,1l-5,4.8C18,15.1,18,15.2,18,15.4l1.2,6.8c0.1,0.5-0.4,0.8-0.8,0.6l-6.1-3.3c-0.2-0.1-0.4-0.1-0.5,0l-6.1,3.3c-0.4,0.2-0.9-0.1-0.8-0.6L6,15.4c0-0.2,0-0.4-0.2-0.5l-5-4.8c-0.3-0.3-0.2-0.9,0.3-1l6.9-1c0.2,0,0.3-0.1,0.4-0.3l3-6.3C11.7,1.2,12.3,1.2,12.5,1.6z'/></svg></div>");
+
+            $(e.target).children(".MPPL-addFav").click(function () {
+                let name = e.target.getElementsByClassName("text-muted friends-item-account")[0].textContent;
+                if ($(e.target).children(".MPPL-addFav").hasClass("active")) {
+                    for (let i = 0; i < friends.length; i++) {
+                        if (name == friends[i].name()) {
+                            friends[i].removeFavourite();
+                            break;
+                        }
+                    }
+                }
+                else {
+                    for (let i = 0; i < friends.length; i++) {
+                        if (name == friends[i].name()) {
+                            friends[i].addFavourite();
+                            break;
+                        }
+                    }
+                }
+
+            });
+        }
+    });
+})
