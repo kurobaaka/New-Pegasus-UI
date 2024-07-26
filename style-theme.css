@@ -329,38 +329,6 @@ settings-box
 }
 
 
-.options-dropdown-menu,
-.tag-list
-{
-    background-color: #f4f4f4 !important;
-    color: #000 !important;
-    padding: 0 !important;
-    overflow: hidden;
-
-    animation: anim-option-friend 0.3s ease;
-}
-.MPPL-S-DarkTheme .options-dropdown-menu,
-.MPPL-S-DarkTheme .tag-list
-{
-    background-color: #2b2822 !important;
-    color: #fff !important;
-}
-
-.options-dropdown-menu::after
-{
-    border-bottom: 6px solid #2b2822 !important;
-}
-.options-dropdown-menu button,
-.tag-list button
-{
-    transition: 0.2s ease;
-    padding: 0.8rem 1.5rem !important;
-}
-.options-dropdown-menu button:disabled,
-.tag-list button:disabled
-{
-    color: #2b2822 !important;
-}
 .friends-dropdown-menu .dropdown-menu.dropdown-menu-right
 {
     padding: 0 !important;
