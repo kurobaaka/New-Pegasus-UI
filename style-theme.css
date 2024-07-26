@@ -36,7 +36,7 @@
 .friends-dropdown-menu
 {
     position: relative; 
-    width: 20% !important;
+    width: 10% !important;
     position: fixed !important;
     right: 0 !important;
     padding: 5px !important;
@@ -139,7 +139,7 @@ virtual-list.friends-list
     width: 50% !important;
     max-height: 94% !important;
 
-    order: 4;
+    order: 3;
 }
 settings-box
 {
@@ -153,7 +153,6 @@ settings-box
 .friends-dropdown-menu .form-control
 .character-select-search .form-control
 {
-    order:2 ;
     position: relative; 
     background-color: #e6e6e6 !important;
     border: 1px solid #c5c5c5 !important;
@@ -163,7 +162,6 @@ settings-box
 .friends-dropdown-menu .form-control:focus,
 .character-select-search .form-control:focus
 {
-    order:2 ;
     position: relative; 
     background-color: #e6e6e6 !important;
     border: 1px solid #c5c5c5 !important;
@@ -720,105 +718,6 @@ settings-modal .nav.nav-pills button:nth-child(7)::before{
 
 
 /* For Settings */
-/* Border */
-.MPPL-M-S-BorderRadius-none .dropdown-menu-right,
-.MPPL-M-S-BorderRadius-none .MPPL-S-square-portrait .portrait-box.small,
-.MPPL-M-S-BorderRadius-none .friends-item,
-.MPPL-M-S-BorderRadius-none .options-dropdown-menu,
-.MPPL-M-S-BorderRadius-none .friends-dropdown-menu .dropdown-menu.dropdown-menu-right,
-.MPPL-M-S-BorderRadius-none #pony-box .dropdown-menu,
-.MPPL-M-S-BorderRadius-none .modal-content,
-.MPPL-M-S-BorderRadius-none .MPPL-Window
-{
-    border-radius: 0px !important;
-}
-.MPPL-M-S-BorderRadius-low .dropdown-menu-right,
-.MPPL-M-S-BorderRadius-low .MPPL-S-square-portrait .portrait-box.small,
-.MPPL-M-S-BorderRadius-low .friends-item,
-.MPPL-M-S-BorderRadius-low .options-dropdown-menu,
-.MPPL-M-S-BorderRadius-low .friends-dropdown-menu .dropdown-menu.dropdown-menu-right,
-.MPPL-M-S-BorderRadius-low #pony-box .dropdown-menu,
-.MPPL-M-S-BorderRadius-low .modal-content,
-.MPPL-M-S-BorderRadius-low .MPPL-Window
-{
-    border-radius: 5px !important;
-}
-.MPPL-M-S-BorderRadius-middle .dropdown-menu-right,
-.MPPL-M-S-BorderRadius-middle .MPPL-S-square-portrait .portrait-box.small,
-.MPPL-M-S-BorderRadius-middle .friends-item,
-.MPPL-M-S-BorderRadius-middle .options-dropdown-menu,
-.MPPL-M-S-BorderRadius-middle .friends-dropdown-menu .dropdown-menu.dropdown-menu-right,
-.MPPL-M-S-BorderRadius-middle #pony-box .dropdown-menu,
-.MPPL-M-S-BorderRadius-middle .modal-content,
-.MPPL-M-S-BorderRadius-middle .MPPL-Window
-{
-    border-radius: 10px !important;
-}
-.MPPL-M-S-BorderRadius-high .dropdown-menu-right,
-.MPPL-M-S-BorderRadius-high .MPPL-S-square-portrait .portrait-box.small,
-.MPPL-M-S-BorderRadius-high .friends-item,
-.MPPL-M-S-BorderRadius-high .options-dropdown-menu,
-.MPPL-M-S-BorderRadius-high .friends-dropdown-menu .dropdown-menu.dropdown-menu-right,
-.MPPL-M-S-BorderRadius-high #pony-box .dropdown-menu,
-.MPPL-M-S-BorderRadius-high .modal-content,
-.MPPL-M-S-BorderRadius-high .MPPL-Window
-{
-    border-radius: 15px !important;
-}
-.MPPL-M-S-BorderRadius-ultra .dropdown-menu-right,
-.MPPL-M-S-BorderRadius-ultra .MPPL-S-square-portrait .portrait-box.small,
-.MPPL-M-S-BorderRadius-ultra .friends-item,
-.MPPL-M-S-BorderRadius-ultra .options-dropdown-menu,
-.MPPL-M-S-BorderRadius-ultra .friends-dropdown-menu .dropdown-menu.dropdown-menu-right,
-.MPPL-M-S-BorderRadius-ultra #pony-box .dropdown-menu,
-.MPPL-M-S-BorderRadius-ultra .modal-content,
-.MPPL-M-S-BorderRadius-ultra .MPPL-Window
-{
-    border-radius: 25px !important;
-}
-/* Blur */
-.MPPL-M-S-BackgroundBlur-low .modal-content,
-.MPPL-M-S-BackgroundBlur-low .MPPL-Window,
-.MPPL-M-S-BackgroundBlur-low .dropdown-menu.dropdown-menu-right
-{
-    backdrop-filter: blur(3px);
-}
-.MPPL-M-S-BackgroundBlur-medium .modal-content,
-.MPPL-M-S-BackgroundBlur-medium .MPPL-Window,
-.MPPL-M-S-BackgroundBlur-medium .dropdown-menu.dropdown-menu-right
-{
-    backdrop-filter: blur(7px);
-}
-.MPPL-M-S-BackgroundBlur-high .modal-content,
-.MPPL-M-S-BackgroundBlur-high .MPPL-Window,
-.MPPL-M-S-BackgroundBlur-high .dropdown-menu.dropdown-menu-right
-{
-    backdrop-filter: blur(15px);
-}
-.MPPL-M-S-BlurForDropdown.MPPL-M-S-BackgroundBlur-low .dropdown-menu
-{
-    backdrop-filter: blur(3px);
-}
-.MPPL-M-S-BlurForDropdown.MPPL-M-S-BackgroundBlur-medium .dropdown-menu
-{
-    backdrop-filter: blur(7px);
-}
-.MPPL-M-S-BlurForDropdown.MPPL-M-S-BackgroundBlur-high .dropdown-menu
-{
-    backdrop-filter: blur(15px);
-}
-.MPPL-M-S-BackgroundBlur-low #pony-box .pony-box-rect
-{
-    backdrop-filter: blur(3px);
-}
-.MPPL-M-S-BackgroundBlur-medium #pony-box .pony-box-rect
-{
-    backdrop-filter: blur(7px);
-}
-.MPPL-M-S-BackgroundBlur-high #pony-box .pony-box-rect
-{
-    backdrop-filter: blur(15px);
-}
 
 /* Opacity */
 .MPPL-M-S-opacityWindow-low .modal-content,
