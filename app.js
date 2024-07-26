@@ -102,7 +102,7 @@ let favourites = new Array();
 let settingsData = new Settings();
 
 let versionPlugin = "1.0.0";
-let linkToAuthor = "https://github.com/tpkdupxktd";
+let linkToAuthor = "https://github.com/Waideloss";
 
 let needToUpdate = false;
 let dataUpdate;
