@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "New Pegasus Best UI",
+    "name": "New Pegasus new UI",
     "version": "1.0.0",
-    "description": "Change UI Interface for game Pony Town by Waidelos",
+    "description": "Change UI Interface for game / by Waidelos",
     "icons": {
         "128": "images/128.png"
     },
