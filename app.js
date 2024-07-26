@@ -375,9 +375,6 @@ $(document).ready(function () {
                     settingsData.setData();
                     settingsData.applySettings();
                 }, settingsData.squareImage, "Rounded square character's icons");
-
-                itemSettingsSelect("customRoundnessBorder", "Custom border", settingsData.roundnessWindow, settingsData.setBorderRadius, "A certain type of roundness", new SelectedElement("Pony Town", PonyTownEnum), new SelectedElement("None", noneEnum), new SelectedElement("Small", lowEnum), new SelectedElement("Medium", middleEnum), new SelectedElement("Strong", highEnum), new SelectedElement("Super", ultraEnum));
-
                 
                 let blurCheckbox;
                 if(settingsData.blurBackground == noneEnum)
@@ -551,7 +548,7 @@ $(document).ready(function () {
                 }
             });
 
-            $(".friends-dropdown-menu").append("<div id='MPPL-favouriteFriends' class='MPPL'><div class='MPPL-all-friends MPPL-friends active'>Все</div><div class='MPPL-favourite MPPL-friends'>Избранное</div></div>");
+            $(".friends-dropdown-menu").append("<div id='MPPL-favouriteFriends' class='MPPL'><div class='MPPL-all-friends MPPL-friends active'>Все</div><div class='MPPL-favourite MPPL-friends'>Избранные</div></div>");
 
             $(".MPPL-friends").click(function (e) {
                 $(".MPPL-friends").removeClass("active");
